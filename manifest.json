@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Drive Groups",
+  "version": "0.1.0",
+  "description": "Google Drive dosyalarını taşımadan, yan panelde anlamlı gruplar halinde gösterir.",
+  "minimum_chrome_version": "114",
+  "permissions": ["identity", "sidePanel", "storage"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "action": { "default_title": "Drive Groups panelini aç" },
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "oauth2": {
+    "client_id": "REPLACE_WITH_CHROME_EXTENSION_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/drive.metadata.readonly"]
+  }
+}

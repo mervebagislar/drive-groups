@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drive Groups</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="eyebrow">GOOGLE DRIVE · SANAL GÖRÜNÜM</div>
+    <h1>Drive Groups</h1>
+    <p>Farklı klasörlerdeki aynı projeye ait dosyaları birlikte gör. Dosyalar yerinde kalır.</p>
+  </header>
+  <main>
+    <button id="connect">Drive'a bağlan ve tara</button>
+    <p id="status" role="status" aria-live="polite">Henüz tarama yapılmadı.</p>
+    <label for="mode">Görünüm</label>
+    <select id="mode"><option value="category">Koleksiyonlar</option><option value="type">Dosya türü</option><option value="year">Yıl</option></select>
+    <label for="search">Dosya ara</label>
+    <input id="search" type="search" placeholder="Adında ara…">
+    <details>
+      <summary>Proje koleksiyonlarını düzenle</summary>
+      <p>Her satır: Proje adı: kelime, kelime. Dosya adındaki ilk eşleşme kullanılır; her dosyayı aşağıdan elle düzeltebilirsin.</p>
+      <textarea id="rules" rows="8" spellcheck="false"></textarea>
+      <button id="save-rules" class="secondary">Kuralları kaydet</button>
+    </details>
+    <div id="groups"></div>
+  </main>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>
